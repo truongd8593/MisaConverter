@@ -1,6 +1,8 @@
 # MisaConverter
 
-Currently it only has a Java method calling ghost4j API to convert a .ps file to .pdf file. 
+# Available converters:
+
+- PS to PDF converter: contains a Java method calling ghost4j API to convert a .ps file to .pdf file. 
 
 # Todo:
 
