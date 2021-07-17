@@ -1,3 +1,5 @@
+package com.misacfd.documentconverter;
+
 import org.ghost4j.converter.ConverterException;
 import org.ghost4j.converter.PDFConverter;
 import org.ghost4j.document.DocumentException;
@@ -8,12 +10,16 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class PsToPdfConverter {
+public class PsToPdfConverter implements DocumentConverter{
     public PsToPdfConverter() {
 
     }
 
-    public void convertPsToPdf(String inputFile, String outputFile) throws ConverterException, DocumentException {
+    public void psToPdf(String inputFile, String outputFile) throws ConverterException, DocumentException {
+        convertPsToPdf(inputFile, outputFile);
+    }
+
+    private void convertPsToPdf(String inputFile, String outputFile) throws ConverterException, DocumentException {
         FileOutputStream fos = null;
         PSDocument document = new PSDocument();
         File archivePDFTemp = null;

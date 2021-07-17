@@ -1,6 +1,7 @@
+package com.misacfd.documentconverter;
+
 import org.ghost4j.converter.ConverterException;
 import org.ghost4j.document.DocumentException;
-import org.junit.Assert;
 import org.junit.Test;
 
 public class TestPsToPdfConverter {
@@ -8,7 +9,7 @@ public class TestPsToPdfConverter {
 
     @Test
     public void testPsToPdfConverter() throws ConverterException, DocumentException {
-        PsToPdfConverter psToPdfConverter = new PsToPdfConverter();
-        psToPdfConverter.convertPsToPdf(inputFile, inputFile.replace(".ps", ""));
+        DocumentConverter psToPdfConverter = new PsToPdfConverter();
+        psToPdfConverter.psToPdf(inputFile, inputFile.replace(".ps", ""));
     }
 }
